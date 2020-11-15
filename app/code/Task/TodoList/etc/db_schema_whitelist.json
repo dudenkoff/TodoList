@@ -1,0 +1,12 @@
+{
+    "task_todo_list": {
+        "column": {
+            "entity_id": true,
+            "customer_id": true,
+            "task": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

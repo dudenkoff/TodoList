@@ -1,0 +1,36 @@
+<!--
+/**
+ * @package   Task\TodoList
+ * @author    Anton Dudenkoff <anton@dudenkoff.com>
+ * @copyright 2020 Anton Dudenkoff
+ */
+-->
+<div class="form-todo-content" data-role="content">
+    <h3><!-- ko i18n: 'To Do List'--><!-- /ko --></h3>
+    <form class="form form-todo" id="todo-form">
+        <ul data-bind="foreach: addedTasks" class="todo-list">
+            <li>
+                <a href="#" data-bind="click: $parent.removeTask"><!-- ko i18n: 'Remove'--><!-- /ko --></a>
+                <div data-bind="text: text"></div>
+            </li>
+        </ul>
+        <div class="field">
+            <label class="label" for="task-text">
+                <span data-bind="i18n: 'Enter new Task'"></span>
+            </label>
+            <div class="control">
+                <input class="input-text"
+                       type="text"
+                       id="task-text"
+                       name="task-text"
+                       data-validate="{'required-entry': true}"
+                       data-bind="value: task, attr: { placeholder: $t('Enter new Task')} " />
+            </div>
+            <div class="actions-toolbar">
+                <button class="action action-apply" type="submit" data-bind="'value': $t('Add Task'), click: addTask">
+                    <span><!-- ko i18n: 'Add Task'--><!-- /ko --></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

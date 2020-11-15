@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Task\TodoList
+ * @author    Anton Dudenkoff <anton@dudenkoff.com>
+ * @copyright 2020 Anton Dudenkoff
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="task_todo_list" resource="default" engine="innodb" comment="ToDo List">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Entity Id"/>
+        <column xsi:type="int" name="customer_id" padding="10" unsigned="false" nullable="true" identity="false"
+                comment="Customer Id"/>
+        <column xsi:type="varchar" name="task" nullable="true" length="255" comment="Task Text"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

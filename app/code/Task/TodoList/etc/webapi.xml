@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Task\TodoList
+ * @author    Anton Dudenkoff <anton@dudenkoff.com>
+ * @copyright 2020 Anton Dudenkoff
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/todo/action/add" method="POST">
+        <service class="Task\TodoList\Api\TaskManagementInterface" method="set"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customer.id" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/todo/action/cancel/:taskId" method="DELETE">
+        <service class="Task\TodoList\Api\TaskManagementInterface" method="remove"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customer.id" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+</routes>

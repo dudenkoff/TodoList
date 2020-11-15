@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Task\TodoList
+ * @author    Anton Dudenkoff <anton@dudenkoff.com>
+ * @copyright 2020 Anton Dudenkoff
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_predispatch">
+        <observer name="restrict_website" instance="Task\TodoList\Observer\RestrictWebsite" />
+    </event>
+</config>

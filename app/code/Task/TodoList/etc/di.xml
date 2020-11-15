@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   Task\TodoList
+ * @author    Anton Dudenkoff <anton@dudenkoff.com>
+ * @copyright 2020 Anton Dudenkoff
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Task\TodoList\Api\TaskManagementInterface" type="Task\TodoList\Model\TaskManagement" />
+    <preference for="Task\TodoList\Api\GuestCouponsManagementInterface" type="Task\TodoList\Model\GuestCouponsManagement" />
+    <preference for="Task\TodoList\Api\TaskRepositoryInterface" type="Task\TodoList\Model\TaskRepository" />
+    <preference for="Task\TodoList\Api\Data\TaskSearchResultInterface" type="Magento\Framework\Api\SearchResults" />
+</config>

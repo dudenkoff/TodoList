@@ -1,0 +1,24 @@
+<!--
+/**
+ * @package   Task\TodoList
+ * @author    Anton Dudenkoff <anton@dudenkoff.com>
+ * @copyright 2020 Anton Dudenkoff
+ */
+ -->
+<div id="todo-component" data-bind="scope:'todo-component'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "#todo-component": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "todo-component": {
+                        "component": "Task_TodoList/js/todo",
+                        "template" : "Task_TodoList/todo"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</div>
